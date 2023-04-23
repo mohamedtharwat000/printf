@@ -9,18 +9,18 @@
 int _printf(const char *format, ...)
 {
 
-int i,printed = 0, printed_chars = 0;
+int i, printed = 0, printed_chars = 0;
 int flags, width, precision, size, buff_ind = 0;
 va_list list;
-char buffer [BUFF_SIZE];
+char buffer[BUFF_SIZE];
 
-if(format == NULL)
-	return(-1);
+if (format == NULL)
+return (-1);
 
 va_start(list, format);
 for (i = 0; format && format[i] != '\0'; i++)
 {
-	if(format[i]!='%')
+	if (format[i] != '%')
 	{
 		buffer[buff_ind++] = format[i];
 		if (buff_ind == BUFF_SIZE)
@@ -42,7 +42,7 @@ for (i = 0; format && format[i] != '\0'; i++)
 		printed = handle_print(format, &i, list, buffer,
 				flags, width, precision, size);
 		if (printed == -1)
-			return(-1);
+		return (-1);
 
 		printed_chars += printed;
 
