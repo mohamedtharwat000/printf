@@ -132,8 +132,4 @@ buffer[i--] = '0';
 }
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
-<<<<<<< HEAD
-
-=======
->>>>>>> d7bd25ac9ea26a86c466b66248f535a9625fed8b
 }
