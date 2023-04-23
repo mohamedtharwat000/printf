@@ -8,23 +8,14 @@
 
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-
-=======
->>>>>>> d7bd25ac9ea26a86c466b66248f535a9625fed8b
 int i, printed = 0, printed_chars = 0;
 int flags, width, precision, size, buff_ind = 0;
 va_list list;
 char buffer[BUFF_SIZE];
-<<<<<<< HEAD
 
 if (format == NULL)
 return (-1);
 
-=======
-if (format == NULL)
-	return (-1);
->>>>>>> d7bd25ac9ea26a86c466b66248f535a9625fed8b
 va_start(list, format);
 for (i = 0; format && format[i] != '\0'; i++)
 {
@@ -46,12 +37,8 @@ for (i = 0; format && format[i] != '\0'; i++)
 		printed = handle_print(format, &i, list, buffer,
 				flags, width, precision, size);
 		if (printed == -1)
-<<<<<<< HEAD
 		return (-1);
 
-=======
-			return (-1);
->>>>>>> d7bd25ac9ea26a86c466b66248f535a9625fed8b
 		printed_chars += printed;
 	}
 }
