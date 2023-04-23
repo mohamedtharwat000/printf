@@ -48,6 +48,7 @@ int (*fn)(va_list, char[], int, int, int, int);
 
 typedef struct fmt fmt_t;
 
+void print_buffer (char buffer[], int*buff_ind);
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
