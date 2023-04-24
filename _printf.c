@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		outnum++;
 		i++;
 	}
+	va_end(args, format);
 
 	return (outnum);
 }
