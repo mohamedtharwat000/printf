@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 			printed_char_specifier = handle_print(format, &i, list, buffer,
 				flags, width, precision, length);
 			printed_chars_all += printed_char_specifier;
+			buffer_i = width;
 		}
 		write(1, buffer, buffer_i);
 		buffer_i = 0;
