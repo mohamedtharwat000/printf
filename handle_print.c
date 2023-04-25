@@ -44,16 +44,9 @@ int handle_print(const char *format, int *i, va_list list, char buffer[],
 		}
 	}
 
-	if (format[*i] == '%')
+	while (format[*i] != '%')
 	{
-		printed_chars += write(1, "%", 1);
-	}
-	else
-	{
-		while (format[*i] != '%')
-		{
-			(*i)--;
-		}
+		(*i)--;
 	}
 	return (printed_chars);
 }

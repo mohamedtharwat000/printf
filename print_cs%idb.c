@@ -24,15 +24,14 @@ int print_char(va_list types, char buffer[],
 	{
 		padd = '0';
 	}
-
 	if (width > 1)
 	{
 		if (flags == F_MINUS)
 		{
-			for (i = width; i > 0; i--)
+			buffer[0] = c;
+			for (i = width - 1; i > 0; i--)
 			{
-				buffer[i] = c;
-				buffer[i - 1] = padd;
+				buffer[i] = padd;
 			}
 			return (write(1, buffer, width));
 		}
@@ -41,12 +40,15 @@ int print_char(va_list types, char buffer[],
 			for (i = 0; i < width - 1; i++)
 			{
 				buffer[i] = padd;
-				buffer[i + 1] = c;
 			}
+			buffer[i] = c;
 			return (write(1, buffer, width));
 		}
 	}
-	return (write(1, &c, 1));
+	else
+	{
+		return (write(1, &c, 1));
+	}
 }
 
 
@@ -65,7 +67,7 @@ int print_char(va_list types, char buffer[],
 int print_string(va_list types, char buffer[],
 								 int flags, int width, int precision, int size)
 {
-	int length = 0, i;
+	unsigned int length, i;
 	char *str = va_arg(types, char *);
 
 	UNUSED(buffer);
@@ -78,7 +80,7 @@ int print_string(va_list types, char buffer[],
 			str = "      ";
 		}
 	}
-	while (str[length++])
+	length = strlen(str);
 	if (precision >= 0)
 	{
 		length = precision;
