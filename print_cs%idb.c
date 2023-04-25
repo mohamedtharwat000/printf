@@ -18,6 +18,8 @@ int print_char(va_list types, char buffer[],
 	char c = va_arg(types, int), padd = ' ';
 	int i = 0;
 
+	UNUSED(precision);
+	UNUSED(size);
 	if (flags == F_ZERO)
 	{
 		padd = '0';
@@ -66,6 +68,8 @@ int print_string(va_list types, char buffer[],
 	int length = 0, i;
 	char *str = va_arg(types, char *);
 
+	UNUSED(buffer);
+	UNUSED(size);
 	if (str == NULL)
 	{
 		str = "(null)";
@@ -74,10 +78,7 @@ int print_string(va_list types, char buffer[],
 			str = "      ";
 		}
 	}
-	while (str[length])
-	{
-		length++;
-	}
+	while (str[length++])
 	if (precision >= 0)
 	{
 		length = precision;
