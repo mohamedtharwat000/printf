@@ -17,8 +17,7 @@ int handle_print(const char *format, int *i, va_list list, char buffer[],
 								 int flags, int width, int precision, int size)
 {
 	int index, printed_chars = 0;
-	specifiers format_specifiers[] =
-	{
+	specifiers format_specifiers[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percent},
@@ -40,11 +39,8 @@ int handle_print(const char *format, int *i, va_list list, char buffer[],
 	{
 		if (format[*i] == format_specifiers[index].format_char)
 		{
-			return (
-							 format_specifiers[index].format_function(
-								 list, buffer, flags, width, precision, size
-							 )
-						 );
+			return (format_specifiers[index].format_function(
+								list, buffer, flags, width, precision, size));
 		}
 	}
 
@@ -59,6 +55,5 @@ int handle_print(const char *format, int *i, va_list list, char buffer[],
 			(*i)--;
 		}
 	}
-
 	return (printed_chars);
 }

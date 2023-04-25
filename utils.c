@@ -27,6 +27,7 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 
 	/* The hexa format code is always 2 digits long */
 	unsigned char code = (unsigned char) ascii_code;
+
 	buffer[i++] = '\\';
 	buffer[i++] = 'x';
 	buffer[i++] = map_to[code / 16];
@@ -57,7 +58,7 @@ int is_digit(char c)
 long int convert_size_number(long int num, int size)
 {
 	if (size == S_LONG)
-		return num;
+		return (num);
 	else if (size == S_SHORT)
 		return ((short)num);
 
@@ -74,7 +75,7 @@ long int convert_size_number(long int num, int size)
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
 	if (size == S_LONG)
-		return num;
+		return (num);
 	else if (size == S_SHORT)
 		return ((unsigned short)num);
 
