@@ -1,8 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+
+#include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <limits.h>
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
