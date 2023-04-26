@@ -19,27 +19,21 @@ int get_precision(const char *format, int *i, va_list list)
 
 	(*i)++;
 
-	if (format[*i] == '*')
-	{
-		(*i)++;
-		return (va_arg(list, int));
-	}
-	else if (!is_digit(format[*i]))
-	{
-		return (0);
-	}
-
 	for (; format[*i]; (*i)++)
 	{
 		if (is_digit(format[*i]))
 		{
 			precision = (precision * 10) + (format[*i] - '0');
 		}
+		else if (format[*i] == '*')
+		{
+			(*i)++;
+			return (va_arg(list, int));
+		}
 		else
 		{
 			return (precision);
 		}
 	}
-
 	return (precision);
 }

@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, printed_char_specifier = 0, printed_chars_all = 0, buffer_i = 0;
+	int i = 0, printed_char_specifier = 0, printed_chars_all = 0;
 	int flags, width, precision, length;
 	char buffer[BUFF_SIZE];
 	va_list list;
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			write(1, &format[i], 1);
 			printed_chars_all++;
 		}
-		if (format[i] == '%')
+		else
 		{
 			i++;
 			flags = get_flags(format, &i);
@@ -35,10 +35,12 @@ int _printf(const char *format, ...)
 			length = get_size(format, &i);
 			printed_char_specifier = handle_print(format, &i, list, buffer,
 				flags, width, precision, length);
+			if (printed_char_specifier == -1)
+			{
+				return (-1);
+			}
 			printed_chars_all += printed_char_specifier;
 		}
-		write(1, buffer, buffer_i);
-		buffer_i = 0;
 	}
 	va_end(list);
 
