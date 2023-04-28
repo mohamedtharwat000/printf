@@ -1,1 +1,1 @@
-We worked together as friends and helped each other solve problems. I am very happy to work and share with Tim. Working with friends and sharing is much better than working alone. It is good for raising morale and competition and agood motivation to complete the study with enthusiasm
+We worked together as friends and helped each other solve problems and complete this project. pair programing is much better than working alone. It is good for raising morale and competition and agood motivation to complete the study with enthusiasm.
