@@ -8,7 +8,7 @@
  * Return: Precision.
  */
 
-int get_size(const char *format, int *i)
+int get_length(const char *format, int *i)
 {
 	if (format[*i] == 'l')
 	{

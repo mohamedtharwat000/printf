@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include <limits.h>
 #include <unistd.h>
 #include <string.h>
@@ -49,7 +49,7 @@ int get_width(const char *format, int *i, va_list list);
 
 int get_precision(const char *format, int *i, va_list list);
 
-int get_size(const char *format, int *i);
+int get_length(const char *format, int *i);
 
 
 /* handle_print functions */
