@@ -1,1 +1,1 @@
-We worked together as friends and helped each other solve problems and complete this project. pair programing is much better than working alone. It is good for raising morale and competition and agood motivation to complete the study with enthusiasm.
+# _printf
