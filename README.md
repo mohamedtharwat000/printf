@@ -2,17 +2,6 @@
 
 This project is a custom printf function implementation in C that formats and prints data to the standard output.
 
-## Table of Contents
-
-- [Overview](#Overview)
-- [Files](#Files)
-- [Usage](#Usage)  
-- [Building](#Building)
-- [Return Values](#Return value)
-- [Custom Specifiers](#Custom specifiers)
-- [Bugs](#Bugs)
-- [Contributing](#Contributing)
-
 ## Overview
 
 This printf implementation supports the following conversion specifiers: 
