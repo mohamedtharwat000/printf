@@ -4,14 +4,14 @@ This project is a custom printf function implementation in C that formats and pr
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Files](#files)
-- [Usage](#usage)  
-- [Building](#building)
-- [Return Values](#return-value)
-- [Custom Specifiers](#custom-specifiers)
-- [Bugs](#bugs)
-- [Contributing](#contributing)
+- [Overview](#Overview)
+- [Files](#Files)
+- [Usage](#Usage)  
+- [Building](#Building)
+- [Return Values](#Return value)
+- [Custom Specifiers](#Custom specifiers)
+- [Bugs](#Bugs)
+- [Contributing](#Contributing)
 
 ## Overview
 
