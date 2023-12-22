@@ -77,13 +77,9 @@ printf("Decimal: %d\n", a_number);
 
 To compile all `.c` files into the printf program executable:  
 
-    Copy code  
-
 `$ gcc *.c -o printf`  
 
 Run the resulting `printf` executable:  
-
-    Copy code  
 
 `$ ./printf "Print %s" test`  
 
