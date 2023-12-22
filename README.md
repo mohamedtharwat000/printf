@@ -60,50 +60,31 @@ To use the custom printf:
 printf("String: %s\n", a_string);
 printf("Character: %c\n", a_character);  
 printf("Decimal: %d\n", a_number);
-```
-## Building  
-------------  
+``` 
 
-To compile all `.c` files into the printf program executable:  
+## Contributing
 
-`$ gcc *.c -o printf`  
+Contributions are welcome! Here are some ways you can contribute to this project:
 
-Run the resulting `printf` executable:  
+- Report bugs and issues
+- Fix bugs and issues
+- Add new validation functionality
+- Improve styling and overall UX
+- Refactor code to improve quality
+- Write documentation and improve existing docs
 
-`$ ./printf "Print %s" test`  
+To contribute:
+1. Fork the repository
+2. Create a new branch
+3. Make your changes and commit them
+4. Push your branch and submit a pull request
 
-Which will print `Print test` to stdout.  
+I will review pull requests and provide feedback.
 
-## Return Value
-----------------
-  
-This `printf()` returns the number of characters printed (excluding the null byte at the end of strings).
+## License
 
-If an output error is encountered, a negative value is returned.
-   
-## Custom Specifiers
----------------------  
+This project is open source and available under the [MIT License](LICENSE).
 
-This custom printf handles some non-standard specifiers for additional functionality:
-   
-### **String (%S)**  
+## Credits
 
-Prints a string and nonprintable characters as hex codes: `printf("%S", "hello\n");` prints `hello\x0a`  
-
-### **Reverse (%r)**  
-
-Prints a string in reverse: `printf("%r", "hello");` prints `olleh`  
-   
-### **Rot 13 (%R)**  
-
-Encodes a string with rot13 cipher: `printf("%R", "test");` prints `grfg`   
-
-## Bugs 
---------  
-
-No known bugs. If you find any, please open a GitHub issue!   
-
-## Contributing  
-----------------  
-
-Feel free to contribute to this printf by opening pull requests! All contributions are welcomed!
+created by Mohamed Tharwat
